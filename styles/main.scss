@@ -8,11 +8,13 @@ $headerHeight: 120px;
 $bodyWidth: 646px;
 
 html {
+  cursor: url('https://cl.ly/0Q0A0K1W1U0A') 32 32, default;
   height: 100vh;
   overflow: hidden;
 
   * {
     box-sizing: border-box;
+    cursor: url('https://cl.ly/0Q0A0K1W1U0A') 32 32, default;
   }
 }
 
@@ -126,7 +128,6 @@ main {
   transform-origin: center top;
   transform: translateY(-300px);
   transition: all 0.4s ease;
-  transition-delay: 0.2s;
   visibility: hidden;
   width: 100%;
   z-index: -1;
@@ -141,6 +142,7 @@ main {
   &.visible {
     background: #000;
     transform: translateY(0);
+    transition-delay: 0.2s;
     z-index: 1;
   }
 }
@@ -154,7 +156,25 @@ main {
   transition: all 0.4s ease;
 
   svg {
+    cursor: pointer;
     height: 40px;
+
+    path {
+      transition: all 0.4s ease;
+    }
+
+    &.icon--plus-one:hover path {
+      fill: #E06B92;
+    }
+    &.icon--comment:hover path {
+      fill: #8FADCF;
+    }
+    &.icon--plus:hover path {
+      fill: #72C66E;
+    }
+    &.icon--share:hover path {
+      fill: #978ABF;
+    }
   }
 }
 
