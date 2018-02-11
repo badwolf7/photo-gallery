@@ -56,10 +56,10 @@ const galleryData = [
 ];
 
 /**
+ * Get the dimensions for the incoming image based on the height and width of the container.
  *
- *
- * @param {object} imageData
- * @return {object}
+ * @param {object} imageData An object containing the pertinent of the image.
+ * @return {object} Returns the image height and width for the modal.
  */
 const getModalImageDimensions = (imageData) => {
   const imageBaseHeight = imageData.height;
@@ -100,6 +100,9 @@ const getModalImageDimensions = (imageData) => {
   };
 }
 
+/**
+ * Initiate the build of the gallery and details modal.
+ */
 (initializeBuild = () => {
   const galleryContainer = document.getElementById('gallery');
   const modalContainer = document.querySelector('#modal .swiper-wrapper');
@@ -162,6 +165,7 @@ for (let imageIndex = 0; imageIndex < images.length; imageIndex++) {
 
 document.querySelector('.close').addEventListener('click', toggleDetailsView);
 
+// Set up the Swiper library for touch events and the details carousel.
 const modalSwiper = new Swiper ('.swiper-container', {
   a11y: {
     prevSlideMessage: 'Previous slide',
@@ -178,6 +182,7 @@ const modalSwiper = new Swiper ('.swiper-container', {
   loop: true,
 });
 
+// Capture on change event for swiping details to update image details in the UI.
 modalSwiper.on('slideChange', () => {
   const index = modalSwiper.activeIndex - 1;
   const imageData = galleryData[index];
