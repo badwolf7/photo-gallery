@@ -1,0 +1,141 @@
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  box-shadow: 0 0 30px 3px rgba(50, 50, 50, 0.45);
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 646px;
+}
+
+main {
+  position: relative;
+}
+main.details #main--header {
+  background: #333;
+  box-shadow: none;
+  color: #EBEBEB;
+  margin-bottom: 0;
+}
+main.details #main--header .close {
+  opacity: 1;
+  visibility: visible;
+}
+main.details #gallery {
+  height: calc(100vh - 120px - 96px);
+}
+main.details #modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+#main--header {
+  background: #F5F5F5;
+  box-shadow: inset 0 0 0 2px #E3E3E3;
+  color: #4A4A4A;
+  height: 120px;
+  margin-bottom: 15px;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+#main--header h1 {
+  display: inline-block;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 120px;
+  max-width: 66%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#main--header .close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  right: 53px;
+  top: calc(50% - 14px);
+  visibility: hidden;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.image--wrapper {
+  display: block;
+  height: calc(100vh / 4 - (120px / 4));
+  margin: 0 0 13px 13px;
+  min-height: 206px;
+  min-width: 282px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  width: calc(100% / 2 - 19.5px);
+}
+.image--wrapper img {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+}
+
+#modal {
+  background: none;
+  height: 100%;
+  height: calc(100vh - 120px - 96px);
+  left: 0;
+  margin: 0;
+  max-width: 646px;
+  opacity: 0;
+  position: absolute;
+  top: 120px;
+  transform-origin: center top;
+  transform: translateY(-300px);
+  transition: all 0.4s ease;
+  transition-delay: 0.2s;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+}
+#modal .swiper-slide {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#modal.visible {
+  background: #000;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+#main--footer {
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 41px;
+  transform-origin: center bottom;
+  transition: all 0.4s ease;
+}
+#main--footer svg {
+  height: 40px;
+}
+
+.hidden {
+  transform: scaleY(0);
+}

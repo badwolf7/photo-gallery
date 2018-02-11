@@ -62,10 +62,10 @@ const galleryData = [
  * @return {object}
  */
 const getModalImageDimensions = (imageData) => {
-  const orientation = (imageBaseHeight > imageBaseWidth) ? 'vertical' : 'horizontal';
-
   const imageBaseHeight = imageData.height;
   const imageBaseWidth = imageData.width;
+
+  const orientation = (imageBaseHeight > imageBaseWidth) ? 'vertical' : 'horizontal';
 
   // #modal { height: calc(100vh - #{$headerHeight} - 96px);
   const modalHeight = window.innerHeight - 216;
