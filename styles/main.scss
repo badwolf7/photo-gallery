@@ -101,6 +101,7 @@ main {
   display: block;
   height: calc(100vh / 4 - (#{$headerHeight} / 4));
   margin: 0 0 13px 13px;
+  max-height: 300px;
   min-height: 206px;
   min-width: 282px;
   overflow: hidden;
@@ -110,8 +111,9 @@ main {
 
   img {
     height: auto;
+    max-width: 100%;
     min-height: 100%;
-    width: 100%;
+    width: auto;
   }
 }
 
