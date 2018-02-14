@@ -1,11 +1,11 @@
 html {
-  cursor: url('../images/touch-cursor.ico') 32 32, default;
+  cursor: url('../images/touch-cursor.ico') 32 32, default !important;
   height: 100vh;
   overflow: hidden;
 }
 html * {
   box-sizing: border-box;
-  cursor: url('../images/touch-cursor.ico') 32 32, default;
+  cursor: url('../images/touch-cursor.ico') 32 32, default !important;
 }
 
 body {
