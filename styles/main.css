@@ -8,6 +8,10 @@ html * {
   cursor: url('../images/touch-cursor.ico') 32 32, default !important;
 }
 
+html input {
+  display: none;
+}
+
 body {
   box-shadow: 0 0 30px 3px rgba(50, 50, 50, 0.45);
   height: 100vh;
@@ -136,24 +140,116 @@ main.details #modal {
   transform-origin: center bottom;
   transition: all 0.4s ease;
 }
-#main--footer svg {
+#main--footer > svg {
   cursor: pointer;
   height: 40px;
+  width: auto;
 }
-#main--footer svg path {
+#main--footer > svg path {
   transition: all 0.4s ease;
 }
-#main--footer svg.icon--plus-one:hover path {
+#main--footer > svg.icon--plus-one:hover path {
   fill: #E06B92;
 }
-#main--footer svg.icon--comment:hover path {
+#main--footer > svg.icon--comment:hover path {
   fill: #8FADCF;
 }
-#main--footer svg.icon--plus:hover path {
+#main--footer > svg.icon--plus:hover path {
   fill: #72C66E;
 }
-#main--footer svg.icon--share:hover path {
+#main--footer > svg.icon--share:hover path {
   fill: #978ABF;
+}
+
+.interaction--share {
+  position: relative;
+}
+.interaction--share ul {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.interaction--share ul li a {
+  background: lightblue;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #F5F5F5;
+  display: inline-block;
+  height: 60px;
+  position: absolute;
+  left: -10px;
+  line-height: 60px;
+  opacity: 0;
+  padding-top: 15px;
+  text-align: center;
+  top: 0;
+  transition: all 0.4s cubic-bezier(0.935, 0, 0.34, 1.33);
+  width: 60px;
+  z-index: -1;
+}
+.interaction--share ul li a > svg {
+  height: 30px;
+  width: auto !important;
+}
+.interaction--share ul li:nth-of-type(2) a {
+  transition-delay: 0.1s;
+}
+.interaction--share ul li:nth-of-type(3) a {
+  transition-delay: 0.2s;
+}
+.interaction--share ul li:nth-of-type(4) a {
+  transition-delay: 0.3s;
+}
+.interaction--share ul li:nth-of-type(5) a {
+  transition-delay: 0.4s;
+}
+.interaction--share ul li:nth-of-type(6) a {
+  transition-delay: 0.5s;
+}
+.interaction--share ul li:nth-of-type(7) a {
+  transition-delay: 0.6s;
+}
+.interaction--share ul li:nth-of-type(8) a {
+  transition-delay: 0.7s;
+}
+
+#share-checkbox:checked ~ ul li a {
+  opacity: 1;
+  z-index: 1;
+}
+#share-checkbox:checked ~ ul li .interaction--share--facebook {
+  background: rgba(59, 89, 152, 0.8);
+  top: -100px;
+}
+#share-checkbox:checked ~ ul li .interaction--share--instagram {
+  background: rgba(63, 114, 156, 0.8);
+  transition-delay: .3s;
+  -webkit-transition-delay: .3s;
+  top: -170px;
+}
+#share-checkbox:checked ~ ul li .interaction--share--behance {
+  background: rgba(23, 105, 255, 0.8);
+  transition-delay: .5s;
+  -webkit-transition-delay: .5s;
+  top: -240px;
+}
+#share-checkbox:checked ~ ul li .interaction--share--dribbble {
+  background: rgba(235, 76, 137, 0.8);
+  transition-delay: .6s;
+  -webkit-transition-delay: .6s;
+  top: -310px;
+}
+#share-checkbox:checked ~ ul li .interaction--share--twitter {
+  background: rgba(85, 172, 238, 0.8);
+  transition-delay: .7s;
+  -webkit-transition-delay: .7s;
+  top: -380px;
+}
+#share-checkbox:checked ~ ul li .interaction--share--google-plus {
+  background: rgba(221, 78, 65, 0.8);
+  transition-delay: .8s;
+  -wenkit-transition-delay: .8s;
+  top: -450px;
 }
 
 .hidden {
