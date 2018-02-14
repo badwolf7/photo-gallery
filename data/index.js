@@ -54,7 +54,3 @@ const galleryData = [
     width: 1024,
   },
 ];
-
-exports = {
-  galleryData,
-};

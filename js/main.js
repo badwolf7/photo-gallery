@@ -1,5 +1,5 @@
 /**
- * Initiate the build of the gallery and details modal.
+ * On load initiate the build of the gallery and details modal.
  */
 (initializeBuild = () => {
   const galleryContainer = document.getElementById('gallery');
@@ -38,7 +38,6 @@ const toggleDetailsView = (event) => {
   const modalImage = modalImages[index];
 
   // Toggle classes which trigger CSS transitions
-  console.log(main, mainFooter, modal)
   main.classList.toggle('details');
   mainFooter.classList.toggle('hidden');
   modal.classList.toggle('visible');
@@ -46,7 +45,6 @@ const toggleDetailsView = (event) => {
   if (new Set(main.classList).has('details')) {
     // Showing details view
     modalSwiper.slideTo(Number(index) + 1);
-    // console.log(modalSwiper);
     mainHeaderTitle.innerText = alt;
   } else {
     // Hiding details view
